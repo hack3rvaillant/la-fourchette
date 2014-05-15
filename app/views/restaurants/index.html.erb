@@ -13,12 +13,12 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.description %></td>
-        <td><%= restaurant.photo_url %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div><%= restaurant.name %></div>
+        <div><%= restaurant.description %></div>
+        <div><%= image_tag restaurant.photo_url %></div>
+        <button><%= link_to 'Show', restaurant %></button>
+        <button><%= link_to 'Edit', edit_restaurant_path(restaurant) %></button>
+        <button><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
